@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from wodmart.vercel.app/shop-details by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 13:27:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="....">
+    <meta name="keywords" content="...">
+    <meta name="author" content="PointTheme">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Wodmart-Furniture eCommerce HTML Template</title>
+    <link rel="icon" type="image/x-icon" sizes="20x20" href="/user_front/assets/images/icon/favicon.svg">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/user_front/assets/css/bootstrap-5.3.0.min.css">
+    <!-- fonts & icon -->
+    <link rel="stylesheet" type="text/css" href="/user_front/assets/css/remixicon.css">
+    <!-- Plugin -->
+    <link rel="stylesheet" type="text/css" href="/user_front/assets/css/plugin.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="/user_front/assets/css/main-style.css">
+</head>
+
+<body>
+    <div th:if="${errorMessage}" class="error">
+        <p th:text="${errorMessage}"></p>
+    </div>
+    <div class="loading-page" id="preloader-active">
+        <div class="counter">
+            <img src="/user_front/assets/images/logo/logo.png" alt="img">
+            <span class="number">0%</span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </div>
+    <header>
+        <div class="header-area-two">
+            <div class="main-header">
+                <div class="menu-wrapper header-sticky">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Main-menu for desktop -->
+                                <div class="main-menu">
+                                    <nav>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <!-- Logo-->
+                                            <div class="position-relative">
+                                                <div class="logo logo-large light-logo">
+                                                    <a href="index-2.html"><img src="/user_front/assets/images/logo/logo-2.png"
+                                                            alt="logo"></a>
+                                                </div>
+                                            </div>
+                                            <div class="search-header-position d-block d-lg-none">
+                                                <div class="d-flex gap-15">
+                                                    <div class="search-bar">
+                                                        <a href="javascript:void(0)" class="rounded-btn">
+                                                            <i class="ri-search-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="listing d-none d-lg-block" id="navigation">
+                                                <li class="single-list">
+                                                    <a href="javascript:void(0)" class="single">Home <i
+                                                            class="ri-arrow-down-s-line"></i></a>
+                                                    <ul class="submenu">
+                                                        <li class="single-list">
+                                                            <a href="index-2.html" class="single">Home 01</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="index-two.html" class="single">Home 02</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="single-list">
+                                                    <a href="about.html" class="single">About</a>
+                                                </li>
+                                                <li class="single-list">
+                                                    <a href="shop.html" class="single">Shop</a>
+                                                </li>
+                                                <li class="single-list">
+                                                    <a href="blog.html" class="single">Blog</a>
+                                                </li>
+                                                <li class="single-list">
+                                                    <a href="javascript:void(0)" class="single active">Pages <i
+                                                            class="ri-arrow-down-s-line"></i></a>
+                                                    <ul class="submenu">
+                                                        <li class="single-list">
+                                                            <a href="wishlist.html" class="single">Wishlist</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="blog-details.html" class="single">Blog Details</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="shop-details" class="single">Shop Details</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="order-track.html" class="single">Order Track</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="shopping-cart" class="single">Shopping
+                                                                Cart</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="checkout" class="single">Checkout</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="javascript:void(0)" class="single">Login<i
+                                                                    class="ri-arrow-right-s-line"></i></a>
+                                                            <ul class="submenu">
+                                                                <li class="single-list">
+                                                                    <a href="login" class="single">Login</a>
+                                                                </li>
+                                                                <li class="single-list">
+                                                                    <a href="register"
+                                                                        class="single">Registration</a>
+                                                                </li>
+                                                                <li class="single-list">
+                                                                    <a href="forgot-pass.html" class="single">Forgot
+                                                                        Password</a>
+                                                                </li>
+                                                                <li class="single-list">
+                                                                    <a href="verification.html"
+                                                                        class="single">Verification</a>
+                                                                </li>
+                                                                <li class="single-list">
+                                                                    <a href="new-password.html" class="single">New
+                                                                        Password</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li class="single-list">
+                                                            <a href="faq.html" class="single">FAQs</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="privacy-policy.html" class="single">privacy
+                                                                policy</a>
+                                                        </li>
+                                                        <li class="single-list">
+                                                            <a href="terms-condition.html"
+                                                                class="single">terms-condition</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="single-list">
+                                                    <a href="contact.html" class="single">Contact</a>
+                                                </li>
+                                                <li class="single-list">
+                                                    <p th:if="${customerId}" th:text="'Your Customer ID is: ' + ${customerId}"></p>
+                                                </li>
+                                                <li class="d-block d-lg-none">
+                                                    <div class="login-wrapper">
+                                                        <a href="login">
+                                                            <p class="pera text-color-primary">
+                                                                Login/ Regeister
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="d-block d-lg-none">
+                                                    <div class="login-wrapper">
+                                                        <a href="shopping-cart">
+                                                            <p class="pera text-color-primary">
+                                                                Cart
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="d-block d-lg-none">
+                                                    <div class="login-wrapper">
+                                                        <a href="wishlist.html">
+                                                            <p class="pera text-color-primary">
+                                                                Wishlist
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="d-block d-lg-none">
+                                                    <div class="login-wrapper">
+                                                        <a href="order-track.html">
+                                                            <p class="pera text-color-primary">
+                                                                Track Order
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="d-none d-lg-block">
+                                                <div class="header-right">
+                                                    <div class="header-icon search-bar header-search-box">
+                                                        <p class="pera">Search</p>
+                                                        <div class="search-icon-two">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M22.785 23.9941C22.5326 23.8063 22.2509 23.6479 22.0337 23.4249C19.9089 21.3181 17.8017 19.1996 15.6886 17.0869C15.624 17.0224 15.583 16.9344 15.5301 16.8522C13.0884 18.7242 10.4177 19.3991 7.47701 18.7653C5.02937 18.2372 3.07479 16.8991 1.67195 14.8334C-1.0046 10.9192 -0.370684 5.87229 2.88109 2.71505C6.52026 -0.811896 11.932 -0.817765 15.5712 2.2045C19.3747 5.36174 20.3021 11.1539 16.8978 15.4672C16.9564 15.5318 17.0151 15.5963 17.0797 15.6609C19.1928 17.7736 21.3117 19.8862 23.4189 22.0106C23.642 22.2395 23.8063 22.5211 24 22.7794C24 22.9202 24 23.061 24 23.2019C23.865 23.6009 23.6009 23.865 23.2017 24C23.0667 23.9941 22.9259 23.9941 22.785 23.9941ZM17.0034 9.49314C16.9799 5.34413 13.6166 1.99323 9.49616 2.00497C5.35807 2.02258 1.99478 5.39108 2.01238 9.51075C2.02999 13.648 5.35807 17.0048 9.51377 16.993C13.7164 16.9813 16.9799 13.6069 17.0034 9.49314Z"
+                                                                    fill="#13172B" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <a href="login">
+                                                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_366_11241)">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13 1.75C6.7868 1.75 1.75 6.7868 1.75 13C1.75 16.0203 2.9395 18.7622 4.8774 20.7837C6.40175 17.853 9.4662 15.85 13 15.85C16.5338 15.85 19.5983 17.853 21.1226 20.7837C23.0605 18.7622 24.25 16.0203 24.25 13C24.25 6.7868 19.2132 1.75 13 1.75ZM19.9665 21.8341C18.762 19.188 16.0948 17.35 13 17.35C9.9052 17.35 7.23801 19.188 6.03354 21.8341C7.94968 23.3474 10.3686 24.25 13 24.25C15.6314 24.25 18.0503 23.3474 19.9665 21.8341ZM0.25 13C0.25 5.95837 5.95837 0.25 13 0.25C20.0416 0.25 25.75 5.95837 25.75 13C25.75 16.8422 24.0496 20.2881 21.3627 22.6245C19.1245 24.5709 16.199 25.75 13 25.75C9.80096 25.75 6.87546 24.5709 4.63726 22.6245C1.95044 20.2881 0.25 16.8422 0.25 13Z" fill="currentColor"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13 12.25C11.6193 12.25 10.5 11.1307 10.5 9.75C10.5 8.36929 11.6193 7.25 13 7.25C14.3807 7.25 15.5 8.36929 15.5 9.75C15.5 11.1307 14.3807 12.25 13 12.25ZM9 9.75C9 11.9591 10.7909 13.75 13 13.75C15.2091 13.75 17 11.9591 17 9.75C17 7.54086 15.2091 5.75 13 5.75C10.7909 5.75 9 7.54086 9 9.75Z" fill="currentColor"/>
+                                                                </g>
+                                                                <defs>
+                                                                <clipPath id="clip0_366_11241">
+                                                                <rect width="26" height="26" fill="white"/>
+                                                                </clipPath>
+                                                                </defs>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <a href="wishlist.html">
+                                                            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M7.36008 0.0339781C5.72822 0.245365 4.36236 0.937658 3.20625 2.14257C2.16779 3.22064 1.54369 4.36213 1.1856 5.84713C0.551267 8.42076 1.01167 10.9574 2.53611 13.3408C3.51318 14.8681 4.77672 16.2685 7.09408 18.4035C8.56736 19.7617 13.0639 23.7252 13.2839 23.8573C13.4885 23.9841 13.5653 24 14.0001 24C14.4349 24 14.5116 23.9841 14.7163 23.8573C14.9362 23.7252 19.4431 19.7564 20.9061 18.4035C23.2337 16.2579 24.487 14.8628 25.4641 13.3408C26.9885 10.9574 27.4489 8.42076 26.8146 5.84713C26.4565 4.36213 25.8324 3.22064 24.7939 2.14257C23.7606 1.06978 22.6556 0.451468 21.2079 0.134387C20.4815 -0.0241534 19.1412 -0.0400074 18.5069 0.107964C16.7369 0.504315 15.3813 1.41856 14.1433 3.04625L14.0001 3.23121L13.862 3.04625C12.6393 1.45027 11.3042 0.536023 9.6007 0.134387C9.09426 0.0128394 7.92791 -0.0400074 7.36008 0.0339781ZM9.06868 1.64581C10.5215 1.91004 11.7748 2.77673 12.7672 4.20887C12.9361 4.45725 13.1458 4.7532 13.2276 4.87474C13.6062 5.42435 14.394 5.42435 14.7725 4.87474C14.8544 4.7532 15.0641 4.45725 15.2329 4.20887C16.5886 2.25354 18.4762 1.33401 20.5327 1.62467C22.8142 1.94703 24.5944 3.59585 25.2748 6.02152C25.8119 7.93986 25.5766 9.95332 24.5995 11.766C23.781 13.2827 22.4152 14.8734 20.0365 17.0771C18.8855 18.1393 14.0461 22.441 14.0001 22.441C13.9489 22.441 9.13007 18.1551 7.96372 17.0771C4.30609 13.6896 2.8635 11.5757 2.51564 9.0972C2.29056 7.49595 2.61284 5.77314 3.39552 4.41498C4.5721 2.36981 6.86388 1.24945 9.06868 1.64581Z" fill="currentColor"></path>
+																	</svg>
+                                                            <div class="count"><span class="count-num">4</span></div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <a href="shopping-cart">
+                                                            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M19.7472 6.21264C19.5903 5.81551 19.2308 5.78119 17.464 5.78119H15.9959V5.15364C15.9959 4.17798 15.8541 3.49649 15.5099 2.79539C14.8872 1.52556 13.8443 0.638157 12.4926 0.226322C11.8345 0.0302096 10.8524 -0.053138 10.255 0.0351124C8.59958 0.290058 7.18715 1.31474 6.46828 2.77578C6.11896 3.49159 5.97721 4.17798 5.97721 5.15364V5.7861H4.50403C2.73722 5.7861 2.37778 5.82042 2.22084 6.23225C2.13984 6.4921 1.38047 12.0764 1.05647 14.4837C0.772972 16.5821 0.509722 18.5628 0.317347 20.0532C-0.0167771 22.6223 -0.00665214 22.6615 0.00347284 22.7057V22.7106C0.0490353 22.8773 0.499597 23.3136 0.636284 23.4411L1.2286 24H20.7091L21.1495 23.6225C21.3469 23.4509 22 22.8675 22 22.5782C22 22.3821 19.7877 6.32541 19.7472 6.21264ZM20.4003 22.2056C20.3952 22.2399 20.3547 22.3429 20.2838 22.4164L20.1826 22.5243H1.79053L1.52728 22.2497L2.56509 14.7435C2.92959 12.0715 3.25359 9.74266 3.44597 8.35026C3.53203 7.74231 3.57253 7.43344 3.59278 7.28145C4.27622 7.27655 7.26309 7.27165 10.979 7.27165H18.3702L18.3803 7.32558C18.4613 7.7178 20.3648 21.7692 20.4003 22.2056ZM7.50102 5.7861V5.22718C7.50102 4.84966 7.55165 4.32997 7.60734 4.08973C7.90602 2.86403 8.92358 1.86876 10.1943 1.55008C10.7258 1.4226 11.5966 1.46673 12.1281 1.65304H12.1332C12.6901 1.83444 13.1457 2.12861 13.5659 2.57967C14.2443 3.29547 14.4721 3.93774 14.4721 5.12422V5.7861H7.50102Z" fill="currentColor"></path>
+																	</svg>
+                                                            <div class="count"><span class="count-num">3</span></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <!-- Mobile Menu -->
+                                <div class="div">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- search overlay -->
+            <div class="search-container">
+                <div class="top-section">
+                    <div class="search-icon">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    <div class="modal-search-box">
+                        <input type="text" id="searchField" class="search-field" placeholder="Search...">
+                        <button id="closeSearch" class="close-search-btn">
+                            <kbd class="light-text"> ESC </kbd>
+                        </button>
+                    </div>
+                </div>
+                <div class="body-section">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <ul class="listing">
+                                <li>
+                                    <h4 class="search-label">Recent</h4>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-1.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Modern studio apartment design bedroom and living space
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Wonderful evening escapade starting at Madinat
+                                                    Jumeirah to the musical fountains to see
+                                                    another. Wonderful evening escapade starting at
+                                                    Madinat Jumeirah to the musical fountains to see
+                                                    another
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-2.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Comfortable armchair in a room decorated
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Give a great end to your day in Dubai with our
+                                                    premium evening Red Dune Desert Safari. Give a
+                                                    great end to your day in Dubai with our premium
+                                                    evening Red Dune Desert Safari.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-3.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Cafe with coffee tables as sofas plants and shelves
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Admission to Dubai’s biggest, multicultural
+                                                    festival park with replicas of iconic landmarks.
+                                                    Admission to Dubai’s biggest, multicultural
+                                                    festival park with replicas of iconic landmarks
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <h4 class="search-label">Recent</h4>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-1.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Modern studio apartment design bedroom and living space
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Wonderful evening escapade starting at Madinat
+                                                    Jumeirah to the musical fountains to see
+                                                    another. Wonderful evening escapade starting at
+                                                    Madinat Jumeirah to the musical fountains to see
+                                                    another
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-2.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Comfortable armchair in a room decorated
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Give a great end to your day in Dubai with our
+                                                    premium evening Red Dune Desert Safari. Give a
+                                                    great end to your day in Dubai with our premium
+                                                    evening Red Dune Desert Safari.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="single-list">
+                                    <a href="javascript:void(0)">
+                                        <div class="search-flex">
+                                            <div class="content-img">
+                                                <img src="/user_front/assets/images/news/news-3.png" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title line-clamp-1">
+                                                    Cafe with coffee tables as sofas plants and shelves
+                                                </h4>
+                                                <p class="pera line-clamp-2">
+                                                    Admission to Dubai’s biggest, multicultural
+                                                    festival park with replicas of iconic landmarks.
+                                                    Admission to Dubai’s biggest, multicultural
+                                                    festival park with replicas of iconic landmarks
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="right-section" id="filterMenu">
+                                <h4 class="title">Filter Options</h4>
+                                <!-- List of Filter -->
+                                <ul class="listing">
+                                    <li>
+                                        <h4 class="search-label">Post Type</h4>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Posts (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Posts (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Links (44)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Blogs (23)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- List of Filter -->
+                                <ul class="listing">
+                                    <li>
+                                        <h4 class="search-label">Categories</h4>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Articles (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Poll (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Article (44)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Blogs (23)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- List of Filter -->
+                                <ul class="listing">
+                                    <li>
+                                        <h4 class="search-label">ecommerce</h4>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Articles (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Poll (3)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Article (44)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-list">
+                                        <div class="d-flex align-items-center gap-8">
+                                            <label class="checkbox-label">
+                                                <input class="checkbox-style" type="checkbox" value="remember"
+                                                    name="remember">
+                                                <span class="checkmark-style"></span>
+                                            </label>
+                                            <div class="content">
+                                                <p class="pera">Blogs (23)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="div">
+                            <div class="filter_menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Breadcrumbs S t a r t -->
+        <section class="breadcrumb-section breadcrumb-bg">
+            <div class="container">
+                <div class="row">
+					<div class="col-lg-12">
+                        <div class="breadcrumb-text">
+                            <h1 class="title wow fadeInUp" data-wow-delay="0.1s">Shop Details</h1>
+                            <nav aria-label="breadcrumb" class="breadcrumb-nav wow fadeInUp" data-wow-delay="0.0s">
+                                <ul class="breadcrumb listing">
+                                    <li class="breadcrumb-item single-list"><a href="index-2.html" class="single">Home</a></li>
+                                    <li class="breadcrumb-item single-list" aria-current="page"><a href="javascript:void(0)"
+                                            class="single active">Shop Details</a></li>
+                                </ul>
+                            </nav>
+                        </div>						
+					</div>
+				</div>
+            </div>
+        </section>
+        <!-- End-of Breadcrumbs-->
+        <!-- product area S t a r t -->
+        <section class="product-details-area top-padding">
+            <div class="container">
+                <div class="row g-4">
+<!--                    <div th:if="${product}">-->
+                        <div class="col-xxl-6 col-lg-6">
+                            <div class="product-image-container">
+                                <div class="xzoom-box">
+                                    <img class="xzoom"  th:src="@{${product.getproduct_img()}}"
+                                        th:xoriginal="@{${product.getproduct_img()}}" data-fancybox="gallery" alt="img">
+                                    <div class="shape-01">
+                                        <img src="/user_front/assets/images/product/preview-shape-01.png" alt="img">
+                                    </div>
+                                    <div class="shape-02">
+                                        <img src="/user_front/assets/images/product/preview-shape-02.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="col-xxl-6 col-lg-6">
+                        <div class="product-details-content">
+                            <div class="first-section">
+                                <div class="category-name">
+                                    <p class="pera" th:text="${product.category.categoryName}" ><span class="highlight">Category: </span></p>
+                                </div>
+                                <h4 class="product-name" th:text="${product.productName}"></h4>
+                                <div class="product-price-section">
+                                    <div class="price-section">
+                                        <h4 class="price discounted" th:text="${product.regularPrice}"></h4>
+                                        <h4 class="price" th:text="${product.discountPrice}"></h4>
+                                    </div>
+                                    <div class="ratting-section">
+                                        <div class="all-ratting">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M14 5.39116V5.70526C13.9143 5.90196 13.7892 6.07722 13.6332 6.21924C12.687 7.07588 11.7485 7.94194 10.8032 8.80001C10.7159 8.87939 10.6937 8.94735 10.7189 9.06471C11.0086 10.3759 11.2933 11.6883 11.5789 13.0004C11.6132 13.139 11.6138 13.2843 11.5808 13.4233C11.4492 13.9298 10.9112 14.1514 10.4678 13.8761C9.3554 13.1846 8.2441 12.4897 7.1339 11.7917C7.03433 11.7291 6.9643 11.7311 6.86583 11.7917C5.75982 12.4865 4.65208 13.1783 3.5426 13.867C3.25238 14.0475 2.96079 14.0509 2.68807 13.8365C2.41945 13.6252 2.34806 13.3339 2.42082 12.9981C2.70776 11.6792 2.99416 10.3571 3.28493 9.03729C3.30736 8.93593 3.28493 8.88281 3.21655 8.82056C2.43751 8.1107 1.65382 7.40569 0.885446 6.6844C0.566226 6.38458 0.170415 6.15328 0 5.70526V5.36261L0.0202418 5.33405H0V5.27694C0.00481165 5.28329 0.0100202 5.2893 0.0155917 5.29493C0.0265333 5.28722 0.0410307 5.27951 0.0454074 5.26809C0.187921 4.87918 0.489361 4.76125 0.854809 4.73469C1.30861 4.70157 1.76159 4.65645 2.21457 4.61391C2.99826 4.54024 3.78168 4.46257 4.56564 4.39232C4.67314 4.3829 4.73277 4.34806 4.77681 4.23927C5.27739 3.00514 5.78371 1.77387 6.28702 0.540886C6.34173 0.408107 6.40628 0.283895 6.51242 0.189951C6.90741 -0.164411 7.49907 -0.00850327 7.71599 0.537174C8.20836 1.77473 8.72179 3.00286 9.22237 4.2367C9.26586 4.3435 9.32221 4.38433 9.4319 4.39261C9.88543 4.42688 10.3387 4.46971 10.7917 4.51225C11.5758 4.58592 12.3594 4.66074 13.1425 4.73669C13.314 4.75354 13.4857 4.76782 13.6406 4.86405C13.8364 4.9854 13.9275 5.18043 14 5.39116Z"
+                                                    fill="#FCC013" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M14 5.39116V5.70526C13.9143 5.90196 13.7892 6.07722 13.6332 6.21924C12.687 7.07588 11.7485 7.94194 10.8032 8.80001C10.7159 8.87939 10.6937 8.94735 10.7189 9.06471C11.0086 10.3759 11.2933 11.6883 11.5789 13.0004C11.6132 13.139 11.6138 13.2843 11.5808 13.4233C11.4492 13.9298 10.9112 14.1514 10.4678 13.8761C9.3554 13.1846 8.2441 12.4897 7.1339 11.7917C7.03433 11.7291 6.9643 11.7311 6.86583 11.7917C5.75982 12.4865 4.65208 13.1783 3.5426 13.867C3.25238 14.0475 2.96079 14.0509 2.68807 13.8365C2.41945 13.6252 2.34806 13.3339 2.42082 12.9981C2.70776 11.6792 2.99416 10.3571 3.28493 9.03729C3.30736 8.93593 3.28493 8.88281 3.21655 8.82056C2.43751 8.1107 1.65382 7.40569 0.885446 6.6844C0.566226 6.38458 0.170415 6.15328 0 5.70526V5.36261L0.0202418 5.33405H0V5.27694C0.00481165 5.28329 0.0100202 5.2893 0.0155917 5.29493C0.0265333 5.28722 0.0410307 5.27951 0.0454074 5.26809C0.187921 4.87918 0.489361 4.76125 0.854809 4.73469C1.30861 4.70157 1.76159 4.65645 2.21457 4.61391C2.99826 4.54024 3.78168 4.46257 4.56564 4.39232C4.67314 4.3829 4.73277 4.34806 4.77681 4.23927C5.27739 3.00514 5.78371 1.77387 6.28702 0.540886C6.34173 0.408107 6.40628 0.283895 6.51242 0.189951C6.90741 -0.164411 7.49907 -0.00850327 7.71599 0.537174C8.20836 1.77473 8.72179 3.00286 9.22237 4.2367C9.26586 4.3435 9.32221 4.38433 9.4319 4.39261C9.88543 4.42688 10.3387 4.46971 10.7917 4.51225C11.5758 4.58592 12.3594 4.66074 13.1425 4.73669C13.314 4.75354 13.4857 4.76782 13.6406 4.86405C13.8364 4.9854 13.9275 5.18043 14 5.39116Z"
+                                                    fill="#FCC013" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M14 5.39116V5.70526C13.9143 5.90196 13.7892 6.07722 13.6332 6.21924C12.687 7.07588 11.7485 7.94194 10.8032 8.80001C10.7159 8.87939 10.6937 8.94735 10.7189 9.06471C11.0086 10.3759 11.2933 11.6883 11.5789 13.0004C11.6132 13.139 11.6138 13.2843 11.5808 13.4233C11.4492 13.9298 10.9112 14.1514 10.4678 13.8761C9.3554 13.1846 8.2441 12.4897 7.1339 11.7917C7.03433 11.7291 6.9643 11.7311 6.86583 11.7917C5.75982 12.4865 4.65208 13.1783 3.5426 13.867C3.25238 14.0475 2.96079 14.0509 2.68807 13.8365C2.41945 13.6252 2.34806 13.3339 2.42082 12.9981C2.70776 11.6792 2.99416 10.3571 3.28493 9.03729C3.30736 8.93593 3.28493 8.88281 3.21655 8.82056C2.43751 8.1107 1.65382 7.40569 0.885446 6.6844C0.566226 6.38458 0.170415 6.15328 0 5.70526V5.36261L0.0202418 5.33405H0V5.27694C0.00481165 5.28329 0.0100202 5.2893 0.0155917 5.29493C0.0265333 5.28722 0.0410307 5.27951 0.0454074 5.26809C0.187921 4.87918 0.489361 4.76125 0.854809 4.73469C1.30861 4.70157 1.76159 4.65645 2.21457 4.61391C2.99826 4.54024 3.78168 4.46257 4.56564 4.39232C4.67314 4.3829 4.73277 4.34806 4.77681 4.23927C5.27739 3.00514 5.78371 1.77387 6.28702 0.540886C6.34173 0.408107 6.40628 0.283895 6.51242 0.189951C6.90741 -0.164411 7.49907 -0.00850327 7.71599 0.537174C8.20836 1.77473 8.72179 3.00286 9.22237 4.2367C9.26586 4.3435 9.32221 4.38433 9.4319 4.39261C9.88543 4.42688 10.3387 4.46971 10.7917 4.51225C11.5758 4.58592 12.3594 4.66074 13.1425 4.73669C13.314 4.75354 13.4857 4.76782 13.6406 4.86405C13.8364 4.9854 13.9275 5.18043 14 5.39116Z"
+                                                    fill="#FCC013" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M14 5.39116V5.70526C13.9143 5.90196 13.7892 6.07722 13.6332 6.21924C12.687 7.07588 11.7485 7.94194 10.8032 8.80001C10.7159 8.87939 10.6937 8.94735 10.7189 9.06471C11.0086 10.3759 11.2933 11.6883 11.5789 13.0004C11.6132 13.139 11.6138 13.2843 11.5808 13.4233C11.4492 13.9298 10.9112 14.1514 10.4678 13.8761C9.3554 13.1846 8.2441 12.4897 7.1339 11.7917C7.03433 11.7291 6.9643 11.7311 6.86583 11.7917C5.75982 12.4865 4.65208 13.1783 3.5426 13.867C3.25238 14.0475 2.96079 14.0509 2.68807 13.8365C2.41945 13.6252 2.34806 13.3339 2.42082 12.9981C2.70776 11.6792 2.99416 10.3571 3.28493 9.03729C3.30736 8.93593 3.28493 8.88281 3.21655 8.82056C2.43751 8.1107 1.65382 7.40569 0.885446 6.6844C0.566226 6.38458 0.170415 6.15328 0 5.70526V5.36261L0.0202418 5.33405H0V5.27694C0.00481165 5.28329 0.0100202 5.2893 0.0155917 5.29493C0.0265333 5.28722 0.0410307 5.27951 0.0454074 5.26809C0.187921 4.87918 0.489361 4.76125 0.854809 4.73469C1.30861 4.70157 1.76159 4.65645 2.21457 4.61391C2.99826 4.54024 3.78168 4.46257 4.56564 4.39232C4.67314 4.3829 4.73277 4.34806 4.77681 4.23927C5.27739 3.00514 5.78371 1.77387 6.28702 0.540886C6.34173 0.408107 6.40628 0.283895 6.51242 0.189951C6.90741 -0.164411 7.49907 -0.00850327 7.71599 0.537174C8.20836 1.77473 8.72179 3.00286 9.22237 4.2367C9.26586 4.3435 9.32221 4.38433 9.4319 4.39261C9.88543 4.42688 10.3387 4.46971 10.7917 4.51225C11.5758 4.58592 12.3594 4.66074 13.1425 4.73669C13.314 4.75354 13.4857 4.76782 13.6406 4.86405C13.8364 4.9854 13.9275 5.18043 14 5.39116Z"
+                                                    fill="#FCC013" />
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 14 14" fill="none">
+                                                <path
+                                                    d="M14 5.39116V5.70526C13.9143 5.90196 13.7892 6.07722 13.6332 6.21924C12.687 7.07588 11.7485 7.94194 10.8032 8.80001C10.7159 8.87939 10.6937 8.94735 10.7189 9.06471C11.0086 10.3759 11.2933 11.6883 11.5789 13.0004C11.6132 13.139 11.6138 13.2843 11.5808 13.4233C11.4492 13.9298 10.9112 14.1514 10.4678 13.8761C9.3554 13.1846 8.2441 12.4897 7.1339 11.7917C7.03433 11.7291 6.9643 11.7311 6.86583 11.7917C5.75982 12.4865 4.65208 13.1783 3.5426 13.867C3.25238 14.0475 2.96079 14.0509 2.68807 13.8365C2.41945 13.6252 2.34806 13.3339 2.42082 12.9981C2.70776 11.6792 2.99416 10.3571 3.28493 9.03729C3.30736 8.93593 3.28493 8.88281 3.21655 8.82056C2.43751 8.1107 1.65382 7.40569 0.885446 6.6844C0.566226 6.38458 0.170415 6.15328 0 5.70526V5.36261L0.0202418 5.33405H0V5.27694C0.00481165 5.28329 0.0100202 5.2893 0.0155917 5.29493C0.0265333 5.28722 0.0410307 5.27951 0.0454074 5.26809C0.187921 4.87918 0.489361 4.76125 0.854809 4.73469C1.30861 4.70157 1.76159 4.65645 2.21457 4.61391C2.99826 4.54024 3.78168 4.46257 4.56564 4.39232C4.67314 4.3829 4.73277 4.34806 4.77681 4.23927C5.27739 3.00514 5.78371 1.77387 6.28702 0.540886C6.34173 0.408107 6.40628 0.283895 6.51242 0.189951C6.90741 -0.164411 7.49907 -0.00850327 7.71599 0.537174C8.20836 1.77473 8.72179 3.00286 9.22237 4.2367C9.26586 4.3435 9.32221 4.38433 9.4319 4.39261C9.88543 4.42688 10.3387 4.46971 10.7917 4.51225C11.5758 4.58592 12.3594 4.66074 13.1425 4.73669C13.314 4.75354 13.4857 4.76782 13.6406 4.86405C13.8364 4.9854 13.9275 5.18043 14 5.39116Z"
+                                                    fill="#FCC013" />
+                                            </svg>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                            </div>
+                            <div class="second-section">
+                                <div class="product-desc">
+                                    <p class="desc" th:text="${product.productDescription}"></p>
+
+
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                            <div class="third-section">
+                                <div class="row g-4">
+                                    <div class="col-md-3">
+                                        <h4 class="label">Quantity</h4>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="quantity-section">
+                                            <div class="quantity-btn position-relative">
+                                                <input type="text" name="qty" value="01" class="num-count">
+
+                                                <button class="increase-num">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"
+                                                        viewBox="0 0 12 6" fill="none">
+                                                        <path
+                                                            d="M0 5.36618C0.0532405 5.553 0.143084 5.71647 0.319443 5.84199C0.618921 6.04924 1.0515 6.05508 1.35098 5.84491C1.40755 5.80404 1.46411 5.76026 1.51735 5.71355C2.97481 4.43501 4.4356 3.15355 5.89306 1.875C5.92633 1.84581 5.95295 1.81078 6.03281 1.75824C6.0561 1.79327 6.06941 1.83705 6.10269 1.86625C7.57346 3.15938 9.04755 4.4496 10.5183 5.74274C10.7779 5.97043 11.0773 6.058 11.4367 5.95875C11.9591 5.8128 12.1721 5.22315 11.8427 4.83784C11.8061 4.79405 11.7628 4.75318 11.7196 4.71232C10.0225 3.2236 8.32881 1.73489 6.63177 0.249093C6.32231 -0.0223789 5.92966 -0.0749219 5.57361 0.106059C5.4871 0.149845 5.41056 0.214063 5.34069 0.275363C3.69356 1.72029 2.04976 3.16522 0.399304 4.60723C0.216289 4.76778 0.0532405 4.93125 0 5.16185C0 5.22899 0 5.29613 0 5.36618Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </button>
+                                                <button class="decrease-num">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"
+                                                        viewBox="0 0 12 6" fill="none">
+                                                        <path
+                                                            d="M12 0.633816C11.9468 0.446997 11.8569 0.28353 11.6806 0.158011C11.3811 -0.0492418 10.9485 -0.0550799 10.649 0.155092C10.5925 0.195958 10.5359 0.239744 10.4826 0.286449C9.02519 1.56499 7.5644 2.84645 6.10694 4.125C6.07367 4.15419 6.04705 4.18922 5.96719 4.24176C5.9439 4.20673 5.93059 4.16294 5.89731 4.13375C4.42654 2.84062 2.95245 1.5504 1.48168 0.257257C1.22213 0.0295717 0.922652 -0.0579998 0.563279 0.0412478C0.0408569 0.1872 -0.172105 0.776848 0.157321 1.16216C0.193924 1.20595 0.237181 1.24681 0.280439 1.28768C1.97748 2.7764 3.67119 4.26511 5.36823 5.75091C5.67769 6.02238 6.07034 6.07492 6.42639 5.89394C6.5129 5.85015 6.58944 5.78594 6.65931 5.72464C8.30644 4.27971 9.95024 2.83478 11.6007 1.39277C11.7837 1.23222 11.9468 1.06875 12 0.838149C12 0.771011 12 0.703873 12 0.633816Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End-of product area-->
+
+
+        <!-- End-of more details area-->
+        <!-- Related Product S t a r t -->
+        <section class="related-product feature-area section-padding2">
+            <div class="container">
+                <div class="row">
+					<div class="col-lg-12">
+                        <div class="section-title">
+                            <h4 class="title">Related Products</h4>
+                        </div>
+                        <div class="swiper featureSwiper-active">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price text-color-primary">$320</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-5.png" alt="img">
+                                            </a>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Rift Gogan Sofa Large</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(11)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Rift Gogan Sofa Large</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(11)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price discounted">$700</h4>
+                                                <h4 class="price text-color-primary">$600</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-6.png" alt="img">
+                                            </a>
+                                            <div class="discount-badge">
+                                                <span class="percentage">- 35%</span>
+                                            </div>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Candelaria Fabric Sofa</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(36)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Candelaria Fabric Sofa</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(36)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price text-color-primary">$110</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-7.png" alt="img">
+                                            </a>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Envole Pendant Light</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(20)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Envole Pendant Light</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(20)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price discounted">$500</h4>
+                                                <h4 class="price text-color-primary">$460</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-8.png" alt="img">
+                                            </a>
+                                            <div class="discount-badge">
+                                                <span class="percentage">- 45%</span>
+                                            </div>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Otello Armchair Ghini</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(41)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Otello Armchair Ghini</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(41)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price text-color-primary">$300</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-9.png" alt="img">
+                                            </a>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Orca is an Armchair</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(25)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Orca is an Armchair</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(25)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product-card best-product-card">
+                                        <div class="top-card">
+                                            <div class="price-section">
+                                                <h4 class="price text-color-primary">$500</h4>
+                                            </div>
+                                            <button class="wishlist-icon">
+                                                <img src="/user_front/assets/images/icon/wish-icon-2.png" alt="img">
+                                            </button>
+                                        </div>
+                                        <div class="product-img-card best-product-img-card">
+                                            <a href="shop-details">
+                                                <img src="/user_front/assets/images/product/product-10.png" alt="img">
+                                            </a>
+                                            <div class="special-icon">
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19"
+                                                        viewBox="0 0 21 19" fill="none">
+                                                        <path
+                                                            d="M0.978546 2.56816V5.13649H1.65442H2.33029V3.71701V2.292L5.45619 5.35743L8.58209 8.42285L9.07209 7.9368L9.56773 7.45628L6.44183 4.39085L3.31593 1.32542H4.76905H6.21654V0.662629V-0.000165939H3.59754H0.978546V2.56816Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M15.1167 0.662629V1.32542H16.5642H18.0173L14.8914 4.39085L11.7655 7.45628L12.2611 7.9368L12.7511 8.42285L15.877 5.35743L19.0029 2.292V3.71701V5.13649H19.6788H20.3547V2.56816V-0.000165939H17.7357H15.1167V0.662629Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M5.43926 13.6535L2.33026 16.7078V15.2828V13.8633H1.65439H0.978516V16.4317V19H3.59751H6.21651V18.3372V17.6744H4.76902H3.3159L6.4418 14.609L9.5677 11.5436L9.08896 11.0741C8.82988 10.8145 8.59895 10.6046 8.58206 10.6046C8.56516 10.6046 7.15146 11.9799 5.43926 13.6535Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M12.2442 11.0741L11.7655 11.5436L14.8914 14.609L18.0173 17.6744H16.5641H15.1167V18.3372V19H17.7356H20.3546V16.4317V13.8633H19.6788H19.0029V15.2828V16.7078L15.8883 13.6535C14.1817 11.9799 12.768 10.6046 12.7511 10.6046C12.7342 10.6046 12.5033 10.8145 12.2442 11.0741Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                                <button class="icon-btn">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25"
+                                                        viewBox="0 0 22 25" fill="none">
+                                                        <path
+                                                            d="M9.4304 0.827005C9.4304 1.27952 9.41567 1.65419 9.40094 1.65419C9.38622 1.65419 9.14565 1.69798 8.87563 1.75637C4.21162 2.6906 0.73079 6.34481 0.0827378 10.9868C-0.0694564 12.0475 -0.00563302 13.663 0.225113 14.7432C0.809342 17.5069 2.62094 20.1004 5.01677 21.6185L5.29661 21.7937L5.98885 21.2779C6.36688 20.9957 6.68109 20.7524 6.68109 20.733C6.68109 20.7184 6.55835 20.6405 6.41107 20.5627C5.65992 20.1734 4.68293 19.3949 4.02015 18.6601C2.76332 17.2636 1.95816 15.5606 1.69796 13.77C1.60468 13.1083 1.60468 11.7945 1.69796 11.1668C1.89925 9.83845 2.37056 8.58308 3.07753 7.48341C3.96123 6.11612 5.30643 4.91914 6.77928 4.1844C7.52552 3.8146 8.56142 3.46426 9.2733 3.33775L9.4304 3.30856V3.98977C9.4304 4.36444 9.44022 4.67098 9.45495 4.67098C9.50404 4.67098 12.5725 2.36946 12.5725 2.3354C12.5725 2.30134 9.50404 -0.000179291 9.45495 -0.000179291C9.44022 -0.000179291 9.4304 0.369621 9.4304 0.827005Z"
+                                                            fill="#111111" />
+                                                        <path
+                                                            d="M16.0134 3.6345C15.6354 3.91672 15.331 4.16487 15.3457 4.18434C15.3604 4.20867 15.5077 4.30112 15.6795 4.39357C17.118 5.20129 18.4583 6.56371 19.288 8.07697C19.7888 8.98687 20.211 10.3104 20.3288 11.3419C20.427 12.1545 20.3681 13.551 20.211 14.2906C19.5335 17.4728 17.2997 20.0371 14.2165 21.1757C13.8287 21.3168 12.778 21.6039 12.6406 21.6039C12.5866 21.6039 12.5718 21.4822 12.5718 20.9227C12.5718 20.548 12.562 20.2414 12.5473 20.2414C12.4982 20.2414 9.42976 22.543 9.42976 22.577C9.42976 22.6111 12.4982 24.9126 12.5473 24.9126C12.562 24.9126 12.5718 24.5428 12.5718 24.0854V23.2631L12.7584 23.2339C13.215 23.1609 14.5062 22.8154 14.9284 22.65C18.7578 21.1659 21.3795 17.8767 21.9244 13.8673C22.0668 12.8357 22.003 11.2203 21.7771 10.1693C21.1929 7.40549 19.3813 4.81202 16.9855 3.2939L16.7056 3.11873L16.0134 3.6345Z"
+                                                            fill="#111111" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <a href="shop-details">
+                                            <h4 class="product-title line-clamp-1">Kelly Bracelet Amchair</h4>
+                                        </a>
+                                        <div class="product-review">
+                                            <div class="product-ratting">
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                            </div>
+                                            <p class="count-ratting">(22)</p>
+                                        </div>
+                                        <div class="cart-card best-product-cart-card d-none d-md-block">
+                                            <a href="shop-details">
+                                                <h4 class="product-title line-clamp-1">Kelly Bracelet Amchair</h4>
+                                            </a>
+                                            <div class="product-review">
+                                                <div class="product-ratting">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
+                                                <p class="count-ratting">(22)</p>
+                                            </div>
+                                            <div class="button-section">
+                                                <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                                <div class="fill-pill-btn qty-btn">
+                                                    <div class="qty-container best-product-qty-container">
+                                                        <div class="qty-btn-minus qty-btn mr-1">
+                                                            <i class="ri-subtract-fill"></i>
+                                                        </div>
+                                                        <input type="text" name="qty" value="0" class="input-qty input-rounded">
+                                                        <div class="qty-btn-plus qty-btn ml-1">
+                                                            <i class="ri-add-fill"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-section d-block d-md-none">
+                                            <a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next swiper-common-btn"><i class="ri-arrow-right-s-line"></i></div>
+                            <div class="swiper-button-prev swiper-common-btn"><i class="ri-arrow-left-s-line"></i></div>
+                        </div>						
+					</div>
+				</div>
+            </div>
+
+        </section>
+        <!-- End-of Related Product -->
+        <!-- subscription area S t a r t -->
+        <section class="subscription-area subscription-bg">
+            <div class="container">
+                <div class="row">
+					<div class="col-lg-12">
+                        <div class="subscription-wrapper">
+                            <div class="left-wrapper">
+                                <div class="subscription-content">
+                                    <h4 class="title">Get a surprise discount</h4>
+                                    <p class="pera">Join our email subscription now</p>
+                                </div>
+                                <div class="subscription-input-section">
+                                    <input type="text" class="subscription-input" placeholder="Enter your email address">
+                                    <button type="submit" class="subscribe-btn"><span class="btn-text">Subscribe</span><span
+                                            class="icon"><i class="ri-arrow-right-line"></i></span></button>
+                                </div>
+                            </div>
+                            <div class="right-wrapper">
+                                <div class="subscription-content">
+                                    <h4 class="title">Download App</h4>
+                                    <p class="pera">Save $3 With App & New User only</p>
+                                </div>
+                                <div class="download-app">
+                                    <a href="javascript:void(0)" target="_blank">
+                                        <img src="/user_front/assets/images/icon/google-play.png" alt="img">
+                                    </a>
+                                    <a href="javascript:void(0)" target="_blank">
+                                        <img src="/user_front/assets/images/icon/app-store.png" alt="img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>						
+					</div>
+				</div>
+            </div>
+        </section>
+        <!-- End-of subscription-->
+
+    </main>
+    <!-- Footer S t a r t -->
+    <footer>
+        <div class="footer-wrapper footer-bg-one">
+            <div class="container">
+                <div class="footer-area position-relative">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle">
+                                    <h4 class="title">About Us</h4>
+                                    <p class="pera">Etoshi is an exciting contemporary brand which focuses on
+                                        high-quality products
+                                        graphics with a British style</p>
+                                    <ul class="info-listing">
+                                        <li class="footer-info-list">
+                                            <a href="#" class="single">
+                                                <i class="ri-mail-fill"></i>
+                                                <p class="pera">info@mydomain.com</p>
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-list">
+                                            <a href="#" class="single">
+                                                <div class="d-flex gap-6">
+                                                    <i class="ri-phone-fill"></i>
+                                                    <p class="pera">+777 2345 7885</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="footer-menu-section">
+                                <div class="logo logo-large light-logo">
+                                    <a href="index-2.html"><img src="/user_front/assets/images/logo/logo-dark.png" alt="logo"></a>
+                                </div>
+                                <div class="footer-social-section">
+                                    <h4 class="title">Follow Us</h4>
+                                    <ul class="footer-social-lists">
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-facebook-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-whatsapp-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-twitter-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-instagram-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-linkedin-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-icon">
+                                            <a href="javascript:void(0)" class="list">
+                                                <i class="ri-pinterest-fill"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer-menu">
+                                    <ul class="menu-lists">
+                                        <li class="list">
+                                            <a href="index-2.html" class="menu-list">Home</a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="about.html" class="menu-list">About</a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="shop.html" class="menu-list">Shop</a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="blog.html" class="menu-list">Blog</a>
+                                        </li>
+                                        <li class="list">
+                                            <a href="contact.html" class="menu-list">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 offset-xl-1 col-lg-4 col-sm-6">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle">
+                                    <h4 class="title">My Accounts</h4>
+                                    <ul class="listing">
+                                        <li class="single-list"><a href="javascript:void(0)" class="single">My
+                                                Orders</a></li>
+                                        <li class="single-list"><a href="javascript:void(0)" class="single">My Credit
+                                                Slips</a></li>
+                                        <li class="single-list"><a href="javascript:void(0)" class="single">My
+                                                Addresses</a></li>
+                                        <li class="single-list"><a href="javascript:void(0)" class="single">My Personal
+                                                Info</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom area -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="d-flex justify-content-between gap-14 flex-wrap">
+                        <div class="privacy-section d-flex">
+                            <a href="privacy-policy.html">
+                                <p class="pera mr-25">Privacy Policy</p>
+                            </a>
+                            <span>|</span>
+                            <a href="terms-condition.html">
+                                <p class="pera ml-25">Terms & Conditions</p>
+                            </a>
+                        </div>
+                        <div class="payment-list">
+                            <img src="/user_front/assets/images/logo/payment-list.png" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End-of Footer -->
+
+    <!-- Scroll Up  -->
+    <div class="progressParent" id="back-top">
+        <svg class="backCircle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Add an overlay element -->
+    <div class="overlay"></div>
+    <!-- jquery-->
+    <script src="/user_front/assets/js/jquery-3.7.0.min.js"></script>
+    <script src="/user_front/assets/js/popper.min.js"></script>
+    <script src="/user_front/assets/js/bootstrap-5.3.0.min.js"></script>
+    <!-- Plugin -->
+    <script src="/user_front/assets/js/plugin.js"></script>
+    <!-- Main js-->
+    <script src="/user_front/assets/js/main.js"></script>
+
+</body>
+
+
+<!-- Mirrored from wodmart.vercel.app/shop-details by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 13:27:10 GMT -->
+</html>

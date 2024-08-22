@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace="admin/AdminLayout/head :: head"></head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  .thumbnail {
+    max-width: 150px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+  }
+</style>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img th:src="@{/AdminLTE/dist/img/Klogo.jpg}" class="animation__shake" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <nav th:replace="admin/AdminLayout/Nvarbar :: Nvarbar"></nav>
+  <!-- Main Sidebar Container -->
+  <aside th:replace="admin/AdminLayout/sidebar :: sidebar"></aside>
+
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+
+      </div>
+    </section>
+  </div>
+
+  <footer th:replace="admin/AdminLayout/footer :: footer"></footer>
+  <aside class="control-sidebar control-sidebar-dark"></aside>
+</div>
+<div th:replace="admin/AdminLayout/scripts :: scripts"></div>
+</body>
+</html>

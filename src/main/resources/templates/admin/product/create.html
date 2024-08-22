@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace = "admin/AdminLayout/head :: head"></head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+        .thumbnail {
+            max-width: 150px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+        }
+    </style>
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="wrapper" >
+	       <!-- Preloader -->
+	       <div class="preloader flex-column justify-content-center align-items-center">
+	         <img th:src="@{/AdminLTE/dist/img/Klogo.jpg}" class="animation__shake" alt="AdminLTELogo" height="60" width="60">
+	       </div>
+<nav th:replace="admin/AdminLayout/Nvarbar :: Nvarbar"></nav>
+<!-- Main Sidebar Container -->
+<aside th:replace="admin/AdminLayout/sidebar :: sidebar"></aside>
+<div class="content-wrapper">
+            <!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+			<div class="card-header">
+				<h3 class="card-title">Create New Product</h3>
+			</div>
+			<div class="card card-dark">
+				<div class="card-header">
+					<h3 class="card-title">Product Form</h3>
+				</div>
+				<div class="card-body">
+					<!-- Hiển thị thông báo thành công hoặc lỗi -->
+					<div th:if="${successMessage}" class="alert alert-success" role="alert">
+						<p th:text="${successMessage}"></p>
+					</div>
+					<div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+						<p th:text="${errorMessage}"></p>
+					</div>
+
+					<form th:action="@{/admin/products/create}" method="post">
+						<div class="form-group">
+							<label for="product_name">Product Name</label>
+							<input type="text" id="product_name" name="productName" class="form-control" required />
+						</div>
+						<div class="form-group">
+							<label for="product_name">Product Img</label>
+							<input type="text" id="product_img" name="product_img" class="form-control" required />
+						</div>
+						<div class="form-group">
+							<label for="regular_price">Regular Price</label>
+							<input type="number" id="regular_price" name="regularPrice" step="0.01" class="form-control" required />
+						</div>
+
+						<div class="form-group">
+							<label for="discount_price">Discount Price</label>
+							<input type="number" id="discount_price" name="discountPrice" step="0.01" class="form-control" />
+						</div>
+
+						<div class="form-group">
+							<label for="quantity">Quantity</label>
+							<input type="number" id="quantity" name="quantity" class="form-control" required />
+						</div>
+
+						<div class="form-group">
+							<label for="product_description">Product Description</label>
+							<textarea id="product_description" name="productDescription" class="form-control" rows="3" required></textarea>
+						</div>
+
+						<div class="form-group form-check">
+							<input type="checkbox" id="active" name="active" class="form-check-input" />
+							<label for="active" class="form-check-label">Active</label>
+						</div>
+
+						<div class="form-group">
+							<label for="category">Category</label>
+							<select id="category" name="category.id" class="form-control" required>
+								<option value="">-- Select Category --</option>
+								<th:block th:each="category : ${categories}">
+									<option th:value="${category.id}" th:text="${category.categoryName}"></option>
+								</th:block>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<button type="submit" class="btn btn-success">Save</button>
+							<a href="/admin/products" class="btn btn-dark">Back</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+        </div>
+
+
+       <footer th:replace="admin/AdminLayout/footer :: footer"></footer>
+       <aside class="control-sidebar control-sidebar-dark"></aside>
+   </div>
+<div th:replace="admin/AdminLayout/scripts :: scripts"></div>
+</body>
+</html>

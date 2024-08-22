@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace = "admin/AdminLayout/head :: head"></head>
+<style>
+        .thumbnail {
+            max-width: 150px; 
+            max-height: 100px; 
+            width: auto; 
+            height: auto; 
+        }
+    </style>
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="wrapper" >
+	       <!-- Preloader -->
+	       <div class="preloader flex-column justify-content-center align-items-center">
+	         <img th:src="@{/AdminLTE/dist/img/Klogo.jpg}" class="animation__shake" alt="AdminLTELogo" height="60" width="60">
+	       </div>
+<nav th:replace="admin/AdminLayout/Nvarbar :: Nvarbar"></nav>
+<!-- Main Sidebar Container -->
+<aside th:replace="admin/AdminLayout/sidebar :: sidebar"></aside>
+<div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+					<div class="card card-dark">
+					                       <div class="card-header">
+					                           <h3 class="card-title">Do you want to delete?</h3>
+					                       </div>
+					                       <div class="card-body">
+					                           <table class="table table-bordered table-striped">
+					                               <thead>
+					                                   <tr>
+					                                       <th class="col-sm-3">ID</th>
+					                                       <td class="col-sm-3" th:text="${product.id}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Category</th>
+					                                       <td class="col-sm-3" th:text="${product.category.categoryName}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Product Name</th>
+					                                       <td class="col-sm-3" th:text="${product.productName}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Regular Price</th>
+					                                       <td class="col-sm-3" th:text="${product.regularPrice}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Discount Price</th>
+					                                       <td class="col-sm-3" th:text="${product.discountPrice}"></td>
+					                                   </tr>
+													   <tr>
+														   <th class="col-sm-3">Image</th>
+														   <td><img th:src="@{${product.getproduct_img()}}" alt="Image" class="thumbnail" /></td>
+													   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Quantity</th>
+					                                       <td class="col-sm-3" th:text="${product.quantity}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Product Description</th>
+					                                       <td class="col-sm-3" th:text="${product.productDescription}"></td>
+					                                   </tr>
+					                                   <tr>
+					                                       <th class="col-sm-3">Active</th>
+					                                       <td class="col-sm-3">
+					                                           <span th:text="${product.active ? 'Yes' : 'No'}"></span>
+					                                       </td>
+					                                   </tr>
+					                               </thead>
+					                           </table>
+					                       </div>
+					                   </div>
+									   <div class="card-footer">
+										<form th:action="@{/admin/products/delete/{id}(id=${product.id})}" method="post">
+										            <input type="hidden" name="_method" value="delete"/>
+										            <input type="submit" value="Delete" class="btn btn-danger" />
+										            <a th:href="@{/admin/products}" class="btn btn-dark">Back</a>
+										        </form>
+									      </div>
+                </div>
+            </section>
+            <!-- /.content -->
+        </div>
+       <footer th:replace="admin/AdminLayout/footer :: footer"></footer>
+       <aside class="control-sidebar control-sidebar-dark"></aside>
+   </div>
+<div th:replace="admin/AdminLayout/scripts :: scripts"></div>
+</body>
+</html>

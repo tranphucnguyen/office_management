@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace = "admin/AdminLayout/head :: head"></head>
+<style>
+        .thumbnail {
+            max-width: 150px; 
+            max-height: 100px; 
+            width: auto; 
+            height: auto; 
+        }
+    </style>
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="wrapper" >
+	       <!-- Preloader -->
+	       <div class="preloader flex-column justify-content-center align-items-center">
+	         <img th:src="@{/AdminLTE/dist/img/Klogo.jpg}" class="animation__shake" alt="AdminLTELogo" height="60" width="60">
+	       </div>
+<nav th:replace="admin/AdminLayout/Nvarbar :: Nvarbar"></nav>
+<!-- Main Sidebar Container -->
+<aside th:replace="admin/AdminLayout/sidebar :: sidebar"></aside>
+<div class="content-wrapper">
+            <!-- Main content -->
+			<section class="content">
+			    <div class="container-fluid">
+			        <div class="card card-dark">
+			            <div class="card-header">
+			                <h3 class="card-title">Edit Category</h3>
+			            </div>
+			            <div class="card-body">
+			                <div class="row">
+			                    <div class="col-md-12">
+			                        <form th:action="@{/admin/categories/edit}" method="post" th:object="${category}">
+			                            <div th:if="${errorMessage}" class="text-danger" th:text="${errorMessage}"></div>
+			                            <!-- Hidden ID Field -->
+			                            <input type="hidden" th:field="*{id}" />
+			                            <div class="row">
+			                                <div class="col-md-6">
+			                                    <div class="form-group">
+			                                        <label for="categoryName">Category Name</label>
+			                                        <input type="text" id="categoryName" th:field="*{categoryName}" class="form-control" />
+			                                        <span class="text-danger" th:if="${#fields.hasErrors('categoryName')}" th:errors="*{categoryName}"></span>
+			                                    </div>
+			                                </div>
+			                                <div class="col-md-6">
+			                                    <div class="form-group form-check">
+			                                        <label class="form-check-label">
+			                                            <input type="checkbox" id="active" th:field="*{active}" class="form-check-input" /> Active
+			                                        </label>
+			                                        <span class="text-danger" th:if="${#fields.hasErrors('active')}" th:errors="*{active}"></span>
+			                                    </div>
+			                                </div>
+			                            </div>
+			                            <div class="form-group">
+			                                <input type="submit" value="Save" class="btn btn-primary" />
+			                                <a th:href="@{/admin/categories}" class="btn btn-dark">Back</a>
+			                            </div>
+			                        </form>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</section>
+            <!-- /.content -->
+        </div>
+       <footer th:replace="admin/AdminLayout/footer :: footer"></footer>
+       <aside class="control-sidebar control-sidebar-dark"></aside>
+   </div>
+<div th:replace="admin/AdminLayout/scripts :: scripts"></div>
+</body>
+</html>

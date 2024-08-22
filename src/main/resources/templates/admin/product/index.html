@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:replace = "admin/AdminLayout/head :: head"></head>
+<style>
+        .thumbnail {
+            max-width: 150px; 
+            max-height: 100px; 
+            width: auto; 
+            height: auto; 
+        }
+    </style>
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="wrapper" >
+	       <!-- Preloader -->
+	       <div class="preloader flex-column justify-content-center align-items-center">
+	         <img th:src="@{/AdminLTE/dist/img/Klogo.jpg}" class="animation__shake" alt="AdminLTELogo" height="60" width="60">
+	       </div>
+<nav th:replace="admin/AdminLayout/Nvarbar :: Nvarbar"></nav>
+<!-- Main Sidebar Container -->
+<aside th:replace="admin/AdminLayout/sidebar :: sidebar"></aside>
+<div class="content-wrapper">
+           <!-- Main content -->
+		<section class="content">
+		    <div class="container-fluid">
+				<a th:href="@{/admin/products/create}" class="btn btn-primary mb-2">
+				       <i class="fa fa-plus"></i> Create new
+				   </a>
+				<div class="card card-dark" style="margin-top:10px;">
+				        <div class="card-header">
+				            <h3 class="card-title">Information of Products</h3>
+				        </div>
+				        <div class="card-body">
+				            <table id="example1" class="table table-bordered table-striped">
+				                <thead>
+				                    <tr>
+				                        <th>ID</th>
+				                        <th>Product Name</th>
+										<th>Category Name</th>
+				                        <th>Regular Price</th>
+				                        <th>Discount Price</th>
+				                        <th>Quantity</th>
+				                        <th>Description</th>
+				                        <th>Active</th>
+				                        <th>Action</th>
+				                    </tr>
+				                </thead>
+				                <tbody>
+				                    <tr th:each="product : ${productList}">
+				                        <td th:text="${product.id}"></td>
+										<td th:text="${product.Category.categoryName}"></td>
+				                        <td th:text="${product.productName}"></td>
+										<td>
+											<img th:src="@{${product.getproduct_img()}}" alt="Image" class="thumbnail" />
+										</td>
+				                        <td th:text="${product.regularPrice}"></td>
+				                        <td th:text="${product.discountPrice}"></td>
+				                        <td th:text="${product.quantity}"></td>
+				                        <td th:text="${product.productDescription}"></td>
+				                        <td th:text="${product.active}"></td>
+				                        <td>
+				                            <a th:href="@{/admin/products/details/{id}(id=${product.id})}" class="btn btn-warning"><i class="fa fa-eye"></i></a>
+				                            <a th:href="@{/admin/products/edit/{id}(id=${product.id})}" class="btn btn-primary"><i class="fa fa-pen"></i></a>
+				                            <a th:href="@{/admin/products/delete/{id}(id=${product.id})}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+				                        </td>
+				                    </tr>
+				                </tbody>
+				            </table>
+				        </div>
+				    </div>
+			</div>
+		</section>
+           <!-- /.content -->
+       </div>
+       <footer th:replace="admin/AdminLayout/footer :: footer"></footer>
+       <aside class="control-sidebar control-sidebar-dark"></aside>
+   </div>
+<div th:replace="admin/AdminLayout/scripts :: scripts"></div>
+</body>
+</html>
