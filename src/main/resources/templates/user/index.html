@@ -531,6 +531,8 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-12">
+
+
 						<div class="swiper featureSwiper-active">
 							<div class="swiper-wrapper">
 								<tr th:each="product : ${productList}">
@@ -547,7 +549,7 @@
 										</div>
 										<div class="product-img-card feature-img-card">
 											<a th:href="@{/shop-details/{id}(id=${product.id})}" class="zoomImg">
-												<img th:src="@{${product.getproduct_img()}}" alt="img">
+												<img th:src="@{${product.getProduct_img()}}" alt="img">
 											</a>
 											<div class="discount-badge">
 												<span class="percentage" >-25%</span>
@@ -611,20 +613,26 @@
 												</div>
 												<p class="count-ratting">(31)</p>
 											</div>
-											<div class="button-section">
-												<a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
-												<div class="fill-pill-btn qty-btn">
-													<div class="qty-container featury-qty-container">
-														<div class="qty-btn-minus qty-btn mr-1">
-															<i class="ri-subtract-fill"></i>
-														</div>
-														<input type="text" name="qty" value="0" class="input-qty input-rounded">
-														<div class="qty-btn-plus qty-btn ml-1">
-															<i class="ri-add-fill"></i>
+											<!-- start form to add to cart-->
+											<form th:action="@{/add-to-cart}" method="post">
+												<input type="hidden" name="product.id" th:value="${product.id}" />
+
+												<div class="button-section">
+													<button type="submit" class="cart-btn">Add to Cart</button>
+													<div class="fill-pill-btn qty-btn">
+														<div class="qty-container featury-qty-container">
+															<div class="qty-btn-minus qty-btn mr-1">
+																<i class="ri-subtract-fill"></i>
+															</div>
+															<input type="number" name="quantity" value="1" class="input-qty">
+															<div class="qty-btn-plus qty-btn ml-1">
+																<i class="ri-add-fill"></i>
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
+											</form>
+											<!-- end form to add to cart-->
 										</div>
 										<div class="button-section d-block d-md-none">
 											<a href="javascript:void(0)" class=" cart-btn">Add to Cart</a>
@@ -636,6 +644,7 @@
 							<div class="swiper-button-next swiper-common-btn"><i class="ri-arrow-right-s-line"></i></div>
 							<div class="swiper-button-prev swiper-common-btn"><i class="ri-arrow-left-s-line"></i></div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -1913,6 +1922,8 @@
 	<!-- Add an overlay element -->
 	<div class="overlay"></div>
 	<!-- jquery-->
+
+
 	<script src="/user_front/assets/js/jquery-3.7.0.min.js"></script>
 	<script src="/user_front/assets/js/popper.min.js"></script>
 	<script src="/user_front/assets/js/bootstrap-5.3.0.min.js"></script>

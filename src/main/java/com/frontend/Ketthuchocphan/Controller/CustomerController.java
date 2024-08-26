@@ -1,10 +1,13 @@
 package com.frontend.Ketthuchocphan.Controller;
 
+import com.frontend.Ketthuchocphan.Repository.CartItemRepository;
 import com.frontend.Ketthuchocphan.Repository.CategoryRepository;
 import com.frontend.Ketthuchocphan.Repository.CustomerRepository;
 import com.frontend.Ketthuchocphan.Repository.ProductRepository;
+import com.frontend.Ketthuchocphan.entity.CartItem;
 import com.frontend.Ketthuchocphan.entity.Customer;
 import com.frontend.Ketthuchocphan.entity.Product;
+import com.frontend.Ketthuchocphan.service.CartItemService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +29,9 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
     @Autowired
-    private CustomerService customerService;
+    private CartItemRepository cartItemRepository;
+    @Autowired
+    private CartItemService cartItemService;
     @GetMapping("/")
     public String index(HttpSession session,Model model) {
         // Lấy customerId từ session
@@ -51,21 +56,8 @@ public class CustomerController {
         return "user/index"; // Trả về trang index.html trong thư mục templates
     }
 
-    @GetMapping("shopping-cart")
-    public String shoppingCart(HttpSession session,Model model) {
-        Integer customerId = (Integer) session.getAttribute("customerId");
-        if (customerId != null) {
-            // Tìm kiếm thông tin Customer dựa trên customerId
-            Optional<Customer> customer = customerRepository.findById(customerId);
 
-            if (customer.isPresent()) {
-                // Thêm username vào model để hiển thị trên view
-                model.addAttribute("username", customer.get().getUsername());
-                model.addAttribute("customerId", customer.get().getId());
-            }
-        }
-        return "user/shopping-cart";
-    }
+
     @GetMapping("checkout")
     public String checkout(HttpSession session,Model model) {
         Integer customerId = (Integer) session.getAttribute("customerId");

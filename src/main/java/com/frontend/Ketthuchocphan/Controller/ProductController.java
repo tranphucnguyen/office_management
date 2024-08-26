@@ -122,7 +122,7 @@ public class ProductController {
             if (optionalProduct.isPresent()) {
                 Product product = optionalProduct.get();
                 product.setProductName(productName);
-                product.setproduct_img(product_img);
+                product.setProduct_img(product_img);
                 product.setRegularPrice(regularPrice);
                 product.setDiscountPrice(discountPrice);
                 product.setQuantity(quantity);
