@@ -51,13 +51,53 @@ public class CartItemController {
                 List<CartItem> cartItems = cartItemService.getCartItemsByCustomerId(customerId);
 
                 model.addAttribute("cartItems", cartItems);
+                //total price
+                double totalPrice = cartItems.stream()
+                        .mapToDouble(cartItem -> cartItem.getProduct().getDiscountPrice().doubleValue() * cartItem.getQuantity())
+                        .sum();
+
+                model.addAttribute("totalPrice", totalPrice);
             } else {
                 System.out.println("Customer not found");  // Log when customer is not found
             }
         } else {
             System.out.println("Customer ID is null");  // Log when customerId is null
+            return "redirect:/login";
         }
         return "user/shopping-cart";
+    }
+
+    @GetMapping("checkout")
+    public String checkOut(HttpSession session, Model model) {
+        Integer customerId = (Integer) session.getAttribute("customerId");
+        System.out.println("Customer ID from session: " + customerId);  // Log customerId
+
+        if (customerId != null) {
+            Optional<Customer> customer = customerRepository.findById(customerId);
+
+
+            if (customer.isPresent()) {
+                System.out.println("Found customer: " + customer.get().getUsername());  // Log found customer
+                model.addAttribute("username", customer.get().getUsername());
+                model.addAttribute("customerId", customer.get().getId());
+
+                List<CartItem> cartItems = cartItemService.getCartItemsByCustomerId(customerId);
+
+                model.addAttribute("cartItems", cartItems);
+                //total price
+                double totalPrice = cartItems.stream()
+                        .mapToDouble(cartItem -> cartItem.getProduct().getDiscountPrice().doubleValue() * cartItem.getQuantity())
+                        .sum();
+
+                model.addAttribute("totalPrice", totalPrice);
+            } else {
+                System.out.println("Customer not found");  // Log when customer is not found
+            }
+        } else {
+            System.out.println("Customer ID is null");  // Log when customerId is null
+            return "redirect:/login";
+        }
+        return "user/checkout";
     }
 
     @PostMapping("/add-to-cart")

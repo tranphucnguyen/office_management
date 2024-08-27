@@ -79,7 +79,7 @@
                                                     <a href="about.html" class="single">About</a>
                                                 </li>
                                                 <li class="single-list">
-                                                    <a href="shop.html" class="single">Shop</a>
+                                                    <a href="index.html" class="single">Shop</a>
                                                 </li>
                                                 <li class="single-list">
                                                     <a href="blog.html" class="single">Blog</a>
@@ -293,7 +293,7 @@
                                                         <p th:text="${cartItem.product.productName}" class="cart-pera mb-15">Kelly Bracelet Amchair</p>
                                                     </a>
                                                     <!-------------------------------------------------------------------------->
-                                                    <p th:text="${cartItem.product.discountPrice}" class="cart-pera">$320</p>
+                                                    <p th:text="'$' + ${cartItem.product.discountPrice}" class="cart-pera">$320</p>
                                                 </div>
                                             </td>
                                             <td class="cart-qty">
@@ -321,12 +321,11 @@
                                                 </div>
                                             </td>
                                             <td class="cart-price">
-                                                <p th:text="${T(java.lang.String).format('%.2f', cartItem.product.discountPrice.doubleValue() * cartItem.quantity)}"></p>
+                                                <p th:text="'$' + ${T(java.lang.String).format('%.2f', cartItem.product.discountPrice.doubleValue() * cartItem.quantity)}" class="cart-pera"></p>
                                             </td>
                                             <td class="action">
                                                 <div class="text-center">
                                                     <form th:action="@{/shopping-cart/remove/{cartItemId}(cartItemId=${cartItem.id})}" method="post">
-                                                 
                                                         <button class="del-icon" type="submit" value="Delete">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
                                                                  viewBox="0 0 20 21" fill="none">
@@ -344,16 +343,14 @@
                                                                         fill="currentColor" />
                                                             </svg>
                                                         </button>
-
                                                     </form>
-
                                                 </div>
                                             </td>
 
                                         </tr>
                                     <tr class="cart-button">
                                         <td colspan="3">
-                                            <a href="shop.html" class="outline-pill-btn">
+                                            <a href="/" class="outline-pill-btn">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="78" height="19"
                                                     viewBox="0 0 78 19" fill="none">
                                                     <path
@@ -435,6 +432,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- check out start---------------------------------->
                     <div class="col-xl-4 col-md-6">
                         <div class="mini-card h-100">
                             <div class="header">
@@ -443,7 +441,7 @@
                             <div class="body">
                                 <div class="price-list">
                                     <h4 class="title text-color-primary">Subtotal</h4>
-                                    <div class="title text-color-tertiary">$3,540</div>
+                                    <div th:text="'$' + ${T(java.lang.String).format('%.2f', totalPrice)}" class="title text-color-tertiary" >$3,540</div>
                                 </div>
                                 <div class="divider"></div>
                                 <div class="price-list">
@@ -461,7 +459,7 @@
                                 <div class="divider"></div>
                                 <div class="price-list">
                                     <h4 class="title text-color-primary font-600">Total</h4>
-                                    <div class="title text-color-tertiary">$3,560</div>
+                                    <div th:text="'$' + ${T(java.lang.String).format('%.2f', totalPrice + 20)}" class="title text-color-tertiary">$3,560</div>
                                 </div>
                                 <div class="button-section">
                                     <a href="checkout" class="cart-btn">Checkout</a>
@@ -587,13 +585,13 @@
                                 <div class="footer-menu">
                                     <ul class="menu-lists">
                                         <li class="list">
-                                            <a href="index-2.html" class="menu-list">Home</a>
+                                            <a href="index.html" class="menu-list">Home</a>
                                         </li>
                                         <li class="list">
                                             <a href="about.html" class="menu-list">About</a>
                                         </li>
                                         <li class="list">
-                                            <a href="shop.html" class="menu-list">Shop</a>
+                                            <a href="index.html" class="menu-list">Shop</a>
                                         </li>
                                         <li class="list">
                                             <a href="blog.html" class="menu-list">Blog</a>

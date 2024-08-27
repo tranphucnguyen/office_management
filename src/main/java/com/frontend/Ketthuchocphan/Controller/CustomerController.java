@@ -58,21 +58,7 @@ public class CustomerController {
 
 
 
-    @GetMapping("checkout")
-    public String checkout(HttpSession session,Model model) {
-        Integer customerId = (Integer) session.getAttribute("customerId");
-        if (customerId != null) {
-            // Tìm kiếm thông tin Customer dựa trên customerId
-            Optional<Customer> customer = customerRepository.findById(customerId);
 
-            if (customer.isPresent()) {
-                // Thêm username vào model để hiển thị trên view
-                model.addAttribute("username", customer.get().getUsername());
-                model.addAttribute("customerId", customer.get().getId());
-            }
-        }
-        return "user/checkout";
-    }
     @GetMapping("login")
     public String login(HttpSession session,Model model) {
         Integer customerId = (Integer) session.getAttribute("customerId");
