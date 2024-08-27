@@ -45,10 +45,10 @@ public class Product {
         this.id = id;
     }
 
-    public String getproduct_img() {
+    public String getProduct_img() {
         return product_img;
     }
-    public void setproduct_img(String product_img) {
+    public void setProduct_img(String product_img) {
         this.product_img = product_img;
     }
 
